@@ -1,9 +1,10 @@
 import React from "react";
 import "./Dashboard.css";
+import Header from "./Header";
 function Dashboard() {
   return (
     <div>
-      <h1>Task-Dashboard</h1>
+      <Header title="Task-Dashboard"></Header>
       <p>Welcome to task manager</p>
     </div>
   );
