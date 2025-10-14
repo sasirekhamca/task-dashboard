@@ -1,0 +1,18 @@
+/* src/TaskItem.css */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.task-item span {
+    font-size: 1.1rem;
+}
+
+.task-item .status {
+    font-size: 1.2rem;
+    color: #333;
+}

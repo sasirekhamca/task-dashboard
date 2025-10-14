@@ -1,5 +1,5 @@
 // src/App.jsx
-import Dashboard from "./Dashboard";
+import Dashboard from "./components/Dashboard";
 function App() {
   return (
     <div>

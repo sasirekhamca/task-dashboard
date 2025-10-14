@@ -1,0 +1,17 @@
+div {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+p {
+    color: #666;
+}
+
+/* src/Header.css */
+h1 {
+    color: #333;
+    font-size: 2rem;
+}
