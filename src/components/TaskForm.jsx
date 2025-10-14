@@ -1,13 +1,24 @@
 import React from "react";
 import "./TaskForm.css";
 import { useState } from "react";
+
 function TaskForm({ onAddTask }) {
   const [title, setTitle] = useState("");
+  const [error, setError] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!title.trim()) {
+      setError("Task title cannot be empty");
+      return;
+    }
+    if (title.length > 50) {
+      setError("Task title must be 50 characters or less");
+      return;
+    }
     if (title.trim()) {
-      onAddTask({ id: Date.now(), title, completed: false });
+      onAddTask(title);
       setTitle("");
+      setError("");
     }
   };
   return (
@@ -19,6 +30,7 @@ function TaskForm({ onAddTask }) {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Type a task"
         />
+        {error && <p className="error">{error}</p>}
         <button type="submit">Add</button>
       </form>
     </div>
