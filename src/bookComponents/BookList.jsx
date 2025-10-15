@@ -1,6 +1,6 @@
 import React from "react";
 import BookItem from "./BookItem";
-function BookList({ books, onDelete }) {
+function BookList({ books, onDelete, onToggle }) {
   if (!books.length) return <p>"No Books to display"</p>;
   return (
     <ul>
@@ -11,6 +11,7 @@ function BookList({ books, onDelete }) {
           book={item.book}
           completed={item.completed}
           onDelete={onDelete}
+          onToggle={onToggle}
         />
       ))}
     </ul>

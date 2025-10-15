@@ -33,7 +33,9 @@ function TaskForm({ onAddTask }) {
           placeholder="Type a task"
         />
         {error && <p className="error">{error}</p>}
-        <button type="submit">Add</button>
+        <button type="submit" disabled={!title.trim()}>
+          Add
+        </button>
       </form>
     </div>
   );

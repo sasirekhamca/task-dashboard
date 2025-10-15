@@ -1,5 +1,5 @@
 import React from "react";
-function BookItem({ book, completed, onDelete, id }) {
+function BookItem({ book, completed, onDelete, onToggle, id }) {
   return (
     <div>
       <span>{book}</span>
@@ -10,6 +10,9 @@ function BookItem({ book, completed, onDelete, id }) {
         }
       >
         Delete
+      </button>
+      <button onClick={() => onToggle(id)}>
+        {completed ? "Undo" : "Completed"}
       </button>
     </div>
   );
