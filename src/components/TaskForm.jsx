@@ -16,7 +16,9 @@ function TaskForm({ onAddTask }) {
       return;
     }
     if (title.trim()) {
-      onAddTask(title);
+      const newTask = { id: Date.now(), title, completed: false };
+      onAddTask(newTask);
+      console.log("Adding task:", newTask);
       setTitle("");
       setError("");
     }

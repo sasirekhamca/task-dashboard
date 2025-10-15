@@ -1,17 +1,31 @@
-div {
+/* src/components/Dashboard.css */
+.dashboard {
     text-align: center;
     padding: 20px;
     font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-color, #fafafa);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-
-
-p {
-    color: #666;
+.dashboard p {
+    color: var(--text-color, #666);
+    margin: 10px 0;
 }
 
-/* src/Header.css */
-h1 {
-    color: #333;
-    font-size: 2rem;
+/* Dark mode */
+.dark .dashboard {
+    --bg-color: #333;
+    --text-color: #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 10px;
+        max-width: 100%;
+    }
 }

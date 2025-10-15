@@ -1,9 +1,34 @@
-.task-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* src/components/TaskList.css */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 4px;
+    background-color: var(--bg-color, #fff);
+    transition: background-color 0.3s ease;
+}
+
+.task-list p {
+    color: var(--text-color, #666);
+    text-align: center;
     padding: 10px;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.3s ease,
-        transform 0.3s ease;
+    margin: 0;
+}
+
+/* Dark mode */
+.dark .task-list {
+    --border-color: #555;
+    --bg-color: #444;
+}
+
+.dark .task-list p {
+    --text-color: #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .task-list {
+        border: none;
+    }
 }

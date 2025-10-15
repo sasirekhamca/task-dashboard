@@ -1,12 +1,19 @@
 import React from "react";
 import "./TaskList.css";
 import TaskItem from "./TaskItem";
-function TaskList({ tasks }) {
+function TaskList({ tasks, onDelete, onToggle }) {
   if (!tasks.length) return <p>No tasks available</p>;
   return (
-    <ul className="task-item">
+    <ul className="task-list">
       {tasks.map((task) => (
-        <TaskItem key={task.id} title={task.title} completed={task.completed} />
+        <TaskItem
+          key={task.id}
+          id={task.id}
+          title={task.title}
+          completed={task.completed}
+          onDelete={onDelete}
+          onToggle={onToggle}
+        />
       ))}
     </ul>
   );
