@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import { TaskProvider } from "./TaskContext";
@@ -30,3 +31,24 @@ function App() {
 }
 
 export default App;
+=======
+// src/App.jsx
+import Dashboard from "./components/Dashboard";
+function App() {
+  return (
+    <div>
+      <Dashboard></Dashboard>
+    </div>
+  );
+}
+export default App;
+/* import Dashboard from "./bookComponents/Dashboard";
+function App() {
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
+}
+export default App; */
+>>>>>>> d6d53e54af55b4f6daa358dd4b2fce40fe11dc85
